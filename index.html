@@ -1,0 +1,157 @@
+
+<!doctype html>
+<html>
+<head>
+<title>SkillzHub | Home</title>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu');
+body{
+background-image: url("background.jpeg");
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+text-align:center;
+padding: 0px;
+margin: 0px;
+}
+ul{
+list-style-type:none;
+margin:0;
+padding:0;
+overflow:hidden;
+background-color:#000000;
+font-family: Open Sans;
+font-weight: Bold;
+}
+.liOne{float:left;}
+li a{
+text-decoration:none;
+color:#ffffff;
+padding:15px;
+text-align:center;
+display:block;
+}
+li a:hover{
+background-color:#3F51B5;
+color:#ffffff;
+}
+.active{
+background-color:#9E9E9E;
+}
+h3{
+border-left:#6a0080 solid 3px;
+border-right:#6a0080 solid 3px;
+margin:10px 0px;
+}
+.genericParagraph{
+border-top:3px solid #7b7cff;
+margin-left:300px;
+margin-right:300px;
+}
+.blockquote{
+border: 0px;
+padding-top: 50px;
+padding-bottom: 50px;
+width: 20%;
+rgba(255,255,255,.5)
+font-family: Open Sans;
+font-size: 50px;
+margin-left: auto;
+margin-right: auto;
+opacity: .5
+text-align: center;
+z-index: 2;
+
+}
+.centerDiv{
+	text-align: center;
+	z-index: 2;
+	position: fixed;
+	width: 100%
+}
+.splashText{
+	color: black;
+	font-family: Open Sans;
+	font-size: 75px;
+	text-align: center;
+	position: fixed;
+	width: 100%
+	margin-left:auto;
+	margin-right: auto;
+}
+#particles-js{
+position: fixed;
+z-index: -1;
+width: 100%;
+height: 100%;
+left: 0;
+right: 0;
+}
+.liTwo{
+	float:right;
+}
+.box{
+   background: gray;
+    overflow: hidden;
+    max-width: 200px;
+  
+    padding: 50px;
+		text-align: center;
+		opacity: .5;
+}
+.majorDiv{
+	z-index: 4;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+<ul>
+	<li><a href="index.html" class="active liOne">Home</a></li>
+	<li><a href="about.html" class="liOne">About</a></li>
+	<li><a href="stats.html" class="liOne">Stats</a></li>
+	<li><a href="staff.html" class="liOne">Staff Panel</a></li>
+	<li><a href="roles.html" class="liOne">Roles</a></li>
+	<li><a href="news.html" class="liOne">News</a></li>
+	<li><a href="changelog.txt" class="liOne">Change Log</a></li>
+	<li><a href="credits.html" class="liOne">Credits</a></li>
+	<li><a href="https://discord.gg/U6qYd" class="liTwo">Discord</a></li>
+</ul>
+<div id="particles-js"></div>
+<script src="particles.js"></script>
+<script src="js/app.js"></script>
+<script>
+	var count_particles, stats, update;
+	stats = new Stats;
+	stats.setMode(0);
+	stats.domElement.style.position = 'absolute';
+	stats.domElement.style.left = '0px';
+	stats.domElement.style.top = '0px';
+	document.body.appendChild(stats.domElement);
+	count_particles = document.querySelector('.js-count-particles');
+	update = function() {
+		stats.begin();
+		stats.end();
+		if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+			count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+		}
+		requestAnimationFrame(update);
+	};
+	requestAnimationFrame(update);
+</script>
+<div class="majorDiv">
+	<p class="splashText">SkillzHub</p>
+	<div class="box"></div>
+</div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-113475752-6');
+ga('send', 'pageview');
+
+</script></body>
+</html>
